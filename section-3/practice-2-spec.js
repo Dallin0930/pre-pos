@@ -30,7 +30,7 @@ describe('practice-3-2', () => {
       {key: 'c', count: 8},
       {key: 'g', count: 7},
       {key: 'b', count: 6},
-      {key: 'd', count: 4}s
+      {key: 'd', count: 4}
     ]);
   });
 });

@@ -26,4 +26,3 @@ function createUpdatedCollection(collectionA, objectB) {
   }
     console.log(array);
   }
-
