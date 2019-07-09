@@ -1,28 +1,20 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
-
-  var array=new Array();
-
-   var result={};
-   for(var i=0,v,l=collectionA.length; i<l,v=collectionA[i];i++)
-   {
-       if(v["key"] in objectB["value"])
-       {
-        if(v["count"]>=3)
-        {
-             v["count"]--;
-        }
-       }    
-   }
- 
-  
-   for( var key1 in result){
-    var dict_form1 = {
-      key : key1,
-      count : result[key1]       
-    };
-    array.push(dict_form1);
+ console.log(objectB["value"]) 
+     
+  for(var i =0 ; i< collectionA.length; i++){
+    for(var key in collectionA[i]){
+      console.log(collectionA[i]["key"]);
+      if (objectB["value"].indexOf(collectionA[i]["key"])>-1){
+        var sub = Math.floor(collectionA[i]["count"]/3)
+        collectionA[i]["count"]-=sub
+        break
+      }else {
+        continue
+      }
+    }
   }
-    console.log(array);
-  }
+  console.log(collectionA)
+  return collectionA
+} 
